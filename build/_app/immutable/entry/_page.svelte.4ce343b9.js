@@ -1,0 +1,1 @@
+import{S as s,i as a,s as n,K as d,h as r,E as e}from"../chunks/index.d330f380.js";function c(o){return{c(){this.h()},l(t){d("svelte-1rj1y31",document.head).forEach(r),this.h()},h(){document.title="Štefok - Pogrebno poduzeće"},m:e,p:e,i:e,o:e,d:e}}class l extends s{constructor(t){super(),a(this,t,null,c,n,{})}}export{l as default};
