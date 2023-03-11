@@ -14,12 +14,12 @@ const DETAILS_MIN_LENGTH = 10
 const DETAILS_MAX_LENGTH = 1e3
 
 const handler = async (event) => {
-  if (!process.env.CONTACT_EMAIL) {
-    return {
-      statusCode: 500,
-      body: 'process.env.CONTACT_EMAIL must be defined',
-    }
-  }
+  // if (!process.env.CONTACT_EMAIL) {
+  //   return {
+  //     statusCode: 500,
+  //     body: 'process.env.CONTACT_EMAIL must be defined',
+  //   }
+  // }
 
   const body = JSON.parse(event.body)
 
@@ -52,7 +52,7 @@ const handler = async (event) => {
 
   const descriptor = {
     from: `${body.email}`,
-    to: process.env.CONTACT_EMAIL,
+    to: 'bosnjak.matej@outlook.com',
     subject: `${body.name} sent you a message from a website`,
     text: body.details,
   }
