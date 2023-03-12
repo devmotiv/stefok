@@ -1,7 +1,22 @@
+<script>
+  import { onMount } from 'svelte';
+  let formData;
+  onMount(() => {
+    formData = undefined;
+    const form = document.getElementById('contact_form');
+    formData = new FormData(form);
+    
+    // ...
+  });
+  const sendEmail = () => {
+    console.log(formData)
+  }
+</script>
+
 <section class="form-container container-md p-4 d-flex justify-content-center">
   <section class="form-wrapper p-4">
     <h3>Pošaljite nam e-mail</h3>
-    <form class="d-flex flex-column gap-4 mt-4">
+    <form method="post" id="contact_form" class="d-flex flex-column gap-4 mt-4">
       <div class="d-flex flex-column flex-md-row gap-4">
         <input type="text" placeholder="Vaše Ime" class="input" required/>
         <input type="email" placeholder="Vaša Email Adresa" class="input" required/>
@@ -10,7 +25,7 @@
       <input type="text" placeholder="Naslov / Subjekt" required/>
       <textarea placeholder="Poruka" rows="4" required></textarea>
       <div class="d-flex justify-content-end">
-        <button class="send-button">
+        <button type="submit" class="send-button" onclick="{sendEmail()}">
           Pošalji
           <i class="bi bi-send"></i>
         </button>
