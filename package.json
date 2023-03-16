@@ -17,6 +17,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"sendmail": "^1.6.1"
+		"@egjs/grid": "^1.13.0",
+		"@egjs/svelte-grid": "^1.13.0",
+		"sendmail": "^1.6.1",
+		"svelte-bricks": "^0.1.7"
 	}
 }
