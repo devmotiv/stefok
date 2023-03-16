@@ -7,4 +7,5 @@
 	<meta name="description" content="Nešto iz naše ponude" />
 </svelte:head>
 
-<Galery />
+<Galery cssClass=""/>
+
