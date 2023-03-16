@@ -8,20 +8,19 @@
     const s = document.getElementById('svg');
     if(svg) {
       s.innerHTML = svg;
-      console.log(s)
     }
   })
 </script>
 
-<div class="{cssClasses} w-25 text-center mini_card">
+<div class="{cssClasses} w-20 text-center mini_card">
   <div class="d-flex justify-content-center">
     <span class="outer">
       <span class="inner">
         {#if svg}
         <span id="svg">
-          {svg}
+
         </span>
-        {:else}
+        {:else if icon}
           <i class="{icon}"></i>
         {/if}
       </span>
@@ -38,7 +37,9 @@
 </div>
 
 <style>
-
+.w-20 {
+  width: 20%;
+}
 @media screen and (max-width: 768px) {
   .mini_card {
     flex: 0 1 50%;
@@ -88,5 +89,9 @@
 
 .py-30 {
   padding-top: 7.5rem;
+}
+
+.py-40 {
+  padding-top: 9rem;
 }
 </style>
