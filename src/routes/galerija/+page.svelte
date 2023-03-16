@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Galerija</title>
+	<title>Štefok - Galerija</title>
 	<meta name="description" content="Nešto iz naše ponude" />
 </svelte:head>
 
