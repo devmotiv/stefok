@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Kontakt</title>
+	<title>Štefok - Kontakt</title>
 	<meta name="description" content="Kontaktirajte nas" />
 </svelte:head>
 

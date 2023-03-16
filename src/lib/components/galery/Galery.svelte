@@ -1,12 +1,10 @@
 <script>
+  export let cssClass;
   import data from './data.json';
   import { onMount } from "svelte";  
   import { MasonryGrid } from "@egjs/grid";
-  let isLoading = true;
-
   onMount(() => {
-    const container = document.querySelector('.container')
-    const grid = new MasonryGrid(container, {
+     new MasonryGrid(document.querySelector('.container'), {
         gap: 35,
         useResizeObserver: true,
         observeChildren: true,
@@ -15,16 +13,7 @@
         maxStretchColumnSize: 400,
         column: 0,
         columnSize: 400,
-    });
-    const promise = new Promise((resolve, reject) =>{
-      resolve(() => {
-        grid.renderItems();
-      });
-    })
-    
-    promise.finally(() => {
-      isLoading = false;
-    });
+    }).renderItems();
 })
 let imageFilePath;
 const openImageModal = (event) => {
@@ -40,15 +29,11 @@ const closeImageModal = (event) => {
 }
 </script>
 
-<section>
+<section class="{cssClass}">
   <div id="container" class="container p-4 mt-4 mb-4">
-    {#if isLoading}
-      <div>Loading</div>
-    {:else}
-      {#each data.imageFiles as imageFile}
-        <img src="/images/galery/{imageFile}" loading="lazy" data-grid-lazy="true" alt="" data-grid-not-equal-size="true" on:click={openImageModal} on:keyup={openImageModal}/>
-      {/each}
-    {/if}
+    {#each data.imageFiles as imageFile}
+      <img src="/images/galery/{imageFile}" loading="lazy" data-grid-lazy="true" alt="" data-grid-not-equal-size="true" on:click={openImageModal} on:keyup={openImageModal}/>
+    {/each}
   </div>
 </section>
 
