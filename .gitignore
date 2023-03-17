@@ -9,8 +9,8 @@ node_modules
 .output
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-build
-./build
+build/
 /build
+build
 # Local Netlify folder
 .netlify
