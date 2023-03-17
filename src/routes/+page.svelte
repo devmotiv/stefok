@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section>
-  <Hero h1={data.h1} h2={data.h2} shortAbout={data.shortAbout}/>
+  <Hero h1={data.h1} h2={data.h2} shortAbout={data.shortAbout} displayPhone='true'/>
   <ServicesShort />
   <HelpPanel />
 </section>
