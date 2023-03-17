@@ -10,4 +10,5 @@
 <Hero
   h1="Smrtni slučaj"
   h2="Kako postupiti kada se dogodi smrtni slučaj?"
+  displayPhone='false'
 />

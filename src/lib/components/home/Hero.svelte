@@ -1,20 +1,23 @@
 <script>
-  export let h1, h2, shortAbout;
+  export let h1, h2, shortAbout, shortAboutIconClass, containerClass, displayPhone='true';
 </script>
 
 <section class="hero">
   <div class="content-section d-flex align-items-center justify-content-center">
-    <div class="container p-4 custom">
+    <div class="{containerClass ? containerClass : 'container'} p-4 custom">
       <div class="text">
         <h1>{h1}</h1>
         <h2>{h2}</h2>
         {#if shortAbout}
         <p class="text-left w-50 p-4 about-short m-auto mt-4">
-          Uz veliko iskustvo, specijalizirani smo za obavljanje pogrebnih djelatnosti još od 1999. godine.
-          Na usluzi smo Vam 24 sata dnevno, 7 dana u tjednu!
+          {shortAbout}
+          {#if shortAboutIconClass}
+            <i class="{shortAboutIconClass}"></i>
+          {/if}
         </p>
         {/if}
       </div>
+      {#if displayPhone === 'true'}
       <div class="d-flex flex-column p-4 gap-4 mt-4 align-items-center flex-lg-row justify-content-between">
         <div class="w-50 divider"></div>
         <a href="tel:+385098737163" class="button-phone">
@@ -22,6 +25,7 @@
           <span>Nazovite: +385 098 737 163</span>
         </a>
       </div>
+      {/if}
     </div>
   </div>
 </section>
