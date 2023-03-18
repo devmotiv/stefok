@@ -23,7 +23,7 @@
 
     return false;
   }
-  const local = true;
+  const local = false;
   const workerApi = local ? ' http://127.0.0.1:8787' : 'https://stefok-email-sender.w-discordbot.workers.dev/';
   const sendEmailHandler = (e) => {
     if (isFormDataValid()) {
