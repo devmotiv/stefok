@@ -5,7 +5,13 @@
 
 <svelte:head>
 	<title>Smrtni slučaj</title>
-	<meta name="description" content="Smrtni slučaj" />
+	<meta name="description" content="Pogrebno Poduzeće Mimoza - Kako postupiti u slučaju smrti" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza - Kako postupiti u slučaju smrti" />
+  <meta property="og:description" content="Kako postupiti u slučaju smrti" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
 
 <Hero

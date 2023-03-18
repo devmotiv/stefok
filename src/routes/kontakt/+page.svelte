@@ -8,7 +8,13 @@
 
 <svelte:head>
 	<title>Štefok - Kontakt</title>
-	<meta name="description" content="Kontaktirajte nas" />
+	<meta name="description" content="Pogrebno Poduzeće Mimoza - Kontakt" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza - Kontakt" />
+  <meta property="og:description" content="Kontakt" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
 
 <section>

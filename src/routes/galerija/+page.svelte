@@ -4,12 +4,15 @@
 </script>
 
 <svelte:head>
-	<title>Štefok - Galerija</title>
-	<meta name="description" content="Nešto iz naše ponude" />
+	<title>Mimoza - Galerija</title>
+	<meta name="description" content="Pogrebno Poduzeće Mimoza - Galerija aranžmana" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza - Galerija aranžmana" />
+  <meta property="og:description" content="Galerija aranžmana" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
-<!-- <section class="container-custom mt-4 mb-4">
-  <h1 class="text-center">Galerija</h1>
-</section> -->
 <Hero
   containerClass='container-custom'
   h1="Galerija"

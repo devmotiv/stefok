@@ -4,7 +4,13 @@
 
 <svelte:head>
 	<title>Štefok - O nama</title>
-	<meta name="description" content="About this app" />
+	<meta name="description" content="Pogrebno Poduzeće Mimoza - O nama" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza - O nama" />
+  <meta property="og:description" content="O nama" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
 
 <Hero

@@ -8,6 +8,13 @@
 
 <svelte:head>
 	<title>Štefok - Pogrebno poduzeće</title>
+  <meta name="description" content="Pogrebno Poduzeće Mimoza, Čačinci. S Vama još od 1999. godine.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza" />
+  <meta property="og:description" content="Početna" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
 
 <section>
