@@ -8,11 +8,22 @@
 
 <svelte:head>
 	<title>Štefok - Kontakt</title>
-	<meta name="description" content="Kontaktirajte nas" />
+	<meta name="description" content="Pogrebno Poduzeće Mimoza - Kontakt" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza - Kontakt" />
+  <meta property="og:description" content="Kontakt" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
 
 <section>
-  <Hero h1={data.h1} h2={data.h2} />
+  <Hero 
+    h1={data.h1} 
+    h2={data.h2}   
+    buttonIcon="bi bi-whatsapp"
+    buttonText="(+385) 098 737 163"
+    anchorHref="tel:+385098737163"/>
   <ContactForm />
   <section class="container-fluid my-4 wrapper p-4">
     <div class="text-center info mx-auto">
