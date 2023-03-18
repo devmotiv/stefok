@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
     background-image: 
       radial-gradient(circle at top left,rgba(0,79,140,0.34) 50%,rgba(0,56,94,0.75) 100%),
-      url($lib/images/biel-morro-kcKiBcDTJt4-unsplash.jpg) !important;
+      url($lib/images/heroflowers.jpg) !important;
   }
 
   .hero-secondary {
