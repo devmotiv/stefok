@@ -1,0 +1,16 @@
+{
+  "name": "stefok-email-sender",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230307.0",
+    "typescript": "^5.0.2",
+    "wrangler": "2.12.3"
+  },
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "mailersend": "^2.0.5"
+  }
+}

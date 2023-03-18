@@ -1,31 +1,60 @@
 <script>
   import { onMount } from 'svelte';
-  let formData;
+  let formData = {
+    name: undefined,
+    email: undefined,
+    subject: undefined,
+    message: undefined,
+    phone: undefined,
+  }
+  let form;
   onMount(() => {
-    formData = undefined;
-    const form = document.getElementById('contact_form');
-    formData = new FormData(form);
-    
-    // ...
+    form = document.getElementById('contact_form');
   });
-  const sendEmail = () => {
-    console.log(formData)
+
+  const isFormDataValid = () => {
+    if (formData.name && formData.name.length > 0
+    && formData.email && formData.email.length > 0
+    && formData.subject && formData.subject.length > 0
+    && formData.message && formData.message.length > 0) {
+      return true;
+    }
+
+    return false;
+  }
+  const sendEmailHandler = (e) => {
+    if (isFormDataValid()) {
+      const request = fetch('https://stefok-email-sender.w-discordbot.workers.dev/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+          "Access-Control-Allow-Origin": "*"
+        },
+        body: JSON.stringify(formData)
+      });
+      request.then(data => {
+        return data.json();
+      }).then(result => {
+        console.log(result)
+      })
+    }
+
   }
 </script>
 
 <section class="form-container container-md p-4 d-flex justify-content-center">
   <section class="form-wrapper p-4">
     <h3>Pošaljite nam e-mail</h3>
-    <form method="post" id="contact_form" class="d-flex flex-column gap-4 mt-4">
+    <form on:submit|preventDefault={sendEmailHandler} id="contact_form" class="d-flex flex-column gap-4 mt-4" autocomplete="on">
       <div class="d-flex flex-column flex-md-row gap-4">
-        <input type="text" placeholder="Vaše Ime" class="input" required/>
-        <input type="email" placeholder="Vaša Email Adresa" class="input" required/>
+        <input type="text" placeholder="Vaše Ime" class="input" bind:value="{formData.name}" required/>
+        <input type="email" placeholder="Vaša Email Adresa" class="input" bind:value="{formData.email}" required/>
       </div>
-      <input type="text" placeholder="Vaš broj telefona (Nije obavezno)" required/>
-      <input type="text" placeholder="Naslov / Subjekt" required/>
-      <textarea placeholder="Poruka" rows="4" required></textarea>
+      <input type="text" placeholder="Vaš broj telefona (Nije obavezno)" bind:value="{formData.phone}" required/>
+      <input type="text" placeholder="Naslov / Subjekt" bind:value="{formData.subject}" required/>
+      <textarea placeholder="Poruka" rows="4" bind:value="{formData.message}" required></textarea>
       <div class="d-flex justify-content-end">
-        <button type="submit" class="send-button" onclick="{sendEmail()}">
+        <button type="submit" class="send-button">
           Pošalji
           <i class="bi bi-send"></i>
         </button>
