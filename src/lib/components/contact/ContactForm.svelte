@@ -16,15 +16,18 @@
     if (formData.name && formData.name.length > 0
     && formData.email && formData.email.length > 0
     && formData.subject && formData.subject.length > 0
-    && formData.message && formData.message.length > 0) {
+    && formData.message && formData.message.length > 0
+    && formData.phone && formData.phone.length > 0) {
       return true;
     }
 
     return false;
   }
+  const local = false;
+  const workerApi = local ? ' http://127.0.0.1:8787' : 'https://stefok-email-sender.w-discordbot.workers.dev/';
   const sendEmailHandler = (e) => {
     if (isFormDataValid()) {
-      const request = fetch('https://stefok-email-sender.w-discordbot.workers.dev/', {
+      const request = fetch(workerApi, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
@@ -50,7 +53,7 @@
         <input type="text" placeholder="Vaše Ime" class="input" bind:value="{formData.name}" required/>
         <input type="email" placeholder="Vaša Email Adresa" class="input" bind:value="{formData.email}" required/>
       </div>
-      <input type="text" placeholder="Vaš broj telefona (Nije obavezno)" bind:value="{formData.phone}" required/>
+      <input type="text" placeholder="Vaš broj telefona (Kako bi smo vas mogli kontaktirati)" bind:value="{formData.phone}" required/>
       <input type="text" placeholder="Naslov / Subjekt" bind:value="{formData.subject}" required/>
       <textarea placeholder="Poruka" rows="4" bind:value="{formData.message}" required></textarea>
       <div class="d-flex justify-content-end">
