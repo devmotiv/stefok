@@ -46,9 +46,6 @@
 
 <style>
 
-  .w-max {
-    width: max-content;
-  }
   .divider {
     border: 1px solid rgb(160, 160, 160);
     height: 0;

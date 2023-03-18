@@ -12,7 +12,12 @@
 </svelte:head>
 
 <section>
-  <Hero h1={data.h1} h2={data.h2} />
+  <Hero 
+    h1={data.h1} 
+    h2={data.h2}   
+    buttonIcon="bi bi-whatsapp"
+    buttonText="(+385) 098 737 163"
+    anchorHref="tel:+385098737163"/>
   <ContactForm />
   <section class="container-fluid my-4 wrapper p-4">
     <div class="text-center info mx-auto">

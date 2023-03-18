@@ -1,5 +1,4 @@
 <script>
-  import logo from '$lib/images/logo.svg';
   import config from '$lib/config/config.json';
 </script>
 
@@ -7,16 +6,16 @@
   <nav class="navbar navbar-ligh navbar-expand-lg bg-light px-1 px-md-4">
   <div class="container-fluid-md container-lg">
     <a class="navbar-brand" href="/">
-      <img class="logo" src="{logo}" loading="lazy" alt="Logo"/>
+      <img class="logo" src="images/logo.svg" loading="lazy" alt="Logo"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
           <a class="navbar-brand" href="/">
-            <img class="logo-mobile" src="{logo}" loading="lazy" alt="Logo"/>
+            <img class="logo-mobile" src="images/logo.svg" loading="lazy" alt="Logo"/>
           </a>
         </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

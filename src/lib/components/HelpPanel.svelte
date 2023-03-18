@@ -6,7 +6,7 @@
     </div>
   </section>
   <section class="image-section h-100 w-100">
-    <img class="image" src="/images/roses-white.jpg" alt=""  loading="lazy"/>
+
   </section>
 </section>
 
@@ -20,12 +20,17 @@
   }
 
   .image-section, .text-section {
-    width: 50%;
+    width: 500px;
     height: 100%
   }
 
   .image-section {
     text-align: end;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: 
+      radial-gradient(circle at top left,rgba(0,79,140,0.34) 50%,rgba(0,56,94,0.75) 100%),
+      url($lib/images/biel-morro-kcKiBcDTJt4-unsplash.jpg) !important;
   }
 
   @media screen and (max-width: 991px) {

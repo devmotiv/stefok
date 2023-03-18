@@ -11,12 +11,14 @@
   <h1 class="text-center">Galerija</h1>
 </section> -->
 <Hero
-  containerClass='container-custom text-center'
+  containerClass='container-custom'
   h1="Galerija"
   h2="U našoj ponudi pronaći ćete bogat izbor vijenaca i cvijeća za pogrebe."
   shortAbout="Ukoliko imate posebne želje oko cvjetnih aranžmana koje nisu sadržane u našoj redovnoj ponudi, obratite nam se"
   shortAboutIconClass="bi bi-arrow-down-circle-fill"
-  displayPhone='true'
+  buttonIcon="bi bi-whatsapp"
+  buttonText="Nazovite: (+385) 098 737 163"
+  anchorHref="tel:+385098737163"
 />
 <Galery cssClass=""/>
 
