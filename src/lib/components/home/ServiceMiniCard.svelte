@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
 
 
-  export let icon, svg, title, text, cssClasses;
+  export let icon, svg, title, cssClasses;
   onMount(() => {
     const parser = new DOMParser();
     const s = document.getElementById('svg');
@@ -29,11 +29,6 @@
   <div class="mt-4">
     <h4>{title}</h4>
   </div>
-  {#if text}
-  <div class="mt-4">
-    {text}
-  </div>
-  {/if}
 </div>
 
 <style>
