@@ -120,6 +120,9 @@ export default {
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Basic ${btoa(`${env.MAILJET_API_KEY}:${env.MAILJET_SECRET_KEY}`)}`,
+              'Access-Control-Allow-Origin': 'https://pogrebne-usluge-mimoza.com',
+              'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type',
             },
             body: JSON.stringify({
               Messages: [
