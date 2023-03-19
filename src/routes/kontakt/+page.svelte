@@ -39,6 +39,8 @@
       <h4>
         <i class="bi bi-whatsapp"></i>
         <a href="tel:{config.phone}">{config.phone}</a>
+        <span> / </span>
+        <a href="tel:{config.phoneTwo}">{config.phoneTwo}</a>
       </h4>
       <h4>
         <i class="bi bi-envelope"></i>

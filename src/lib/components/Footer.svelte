@@ -18,6 +18,8 @@
           <div class="box-info">
             <i class="bi bi-whatsapp"></i>
             <a href="tel:{config.phone}">{config.phone}</a>
+            <span> / </span>
+            <a href="tel:{config.phoneTwo}">{config.phoneTwo}</a>
           </div>
           <div class="box-info">
             <i class="bi bi-facebook"></i>
