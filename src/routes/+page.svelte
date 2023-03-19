@@ -7,8 +7,8 @@
 </script>
 
 <svelte:head>
-	<title>Pogrebno Poduzeće Mimoza</title>
-  <meta name="description" content="Pogrebno Poduzeće Mimoza, Čačinci. S Vama još od 1999. godine.">
+	<title>Pogrebno Poduzeće Mimoza - Štefok</title>
+  <meta name="description" content="Pogrebno Poduzeće Mimoza - Štefok, Čačinci. S Vama još od 1999. godine.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="page" />
   <meta property="og:title" content="Pogrebno Poduzeće Mimoza" />
@@ -19,7 +19,7 @@
 
 <section>
   <Hero 
-    h1={data.h1} 
+    h1={data.h1 + ' "ŠTEFOK"'} 
     h2={data.h2} 
     shortAbout={data.shortAbout} 
     displayPhone='true' 

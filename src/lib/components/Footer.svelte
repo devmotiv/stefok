@@ -31,7 +31,7 @@
     <div class="copyright-container">
       <p>Pogrebno poduzeće i cvjećarna još od 1999. godine!</p>
       <hr />
-      <p>© Pogrebno Poduzeće Mimoza. Sva prava zadržana.</p>
+      <p>© Pogrebno Poduzeće Mimoza "ŠTEFOK". Sva prava zadržana.</p>
     </div>
   </div>
 </footer>
