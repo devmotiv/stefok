@@ -127,7 +127,7 @@ export default {
               Messages: [
                 {
                   From: { Email: env.SENDER_EMAIL },
-                  To: [{ Email: 'mbosnjak2@outlook.com' }],
+                  To: [{ Email: 'mirko.stefok@vt.t-com.hr' }],
                   Subject: parsed.subject,
                   TextPart: createMessageText(),
                   HTMLPart: `${createMessageText()}`,
