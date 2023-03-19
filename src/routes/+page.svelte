@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Štefok - Pogrebno poduzeće</title>
+	<title>Pogrebno Poduzeće Mimoza</title>
   <meta name="description" content="Pogrebno Poduzeće Mimoza, Čačinci. S Vama još od 1999. godine.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="page" />

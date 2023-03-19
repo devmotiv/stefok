@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Štefok - O nama</title>
+	<title>O nama</title>
 	<meta name="description" content="Pogrebno Poduzeće Mimoza - O nama" />
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="page" />
