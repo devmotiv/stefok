@@ -27,7 +27,7 @@
   <ContactForm />
   <section class="container-fluid my-4 wrapper p-4">
     <div class="text-center info mx-auto">
-      <h2>Pogrebno Poduzeće Mimoza</h2>
+      <h2>Pogrebno Poduzeće Mimoza "ŠTEFOK"</h2>
       <h4>
         <div class="">
           <i class="bi bi-pin-map"></i>
