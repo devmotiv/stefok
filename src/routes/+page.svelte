@@ -33,7 +33,9 @@
     secondary="true"
     buttonIcon="bi bi-flower2"
     anchorHref="/galerija"
-    buttonText="Pogledajte galeriju"/>
+    buttonText="Pogledajte galeriju"
+    displayPhone='false'
+    displayCustom='true'/>
   <AboutShort />
   <Map />
 </section>

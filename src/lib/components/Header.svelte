@@ -1,5 +1,9 @@
 <script>
   import config from '$lib/config/config.json';
+  import { page } from '$app/stores';
+  let path;
+
+  $: path = $page.url.pathname;
 </script>
 
 <header>
@@ -23,26 +27,26 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 text-center ul-font">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">POČETNA</a>
+            <a class="nav-link" aria-current="page" class:selected={path === '/'} href="/">POČETNA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/o-nama">O NAMA</a>
+            <a class="nav-link" class:selected={path === '/o-nama'} href="/o-nama">O NAMA</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="/usluge">
+            <a class="nav-link" class:selected={path === '/usluge'} href="/usluge">
               USLUGE
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/galerija">GALERIJA</a>
+            <a class="nav-link" class:selected={path === '/galerija'} href="/galerija">GALERIJA</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="/smrtni-slucaj">
+            <a class="nav-link" class:selected={path === '/smrtni-slucaj'} href="/smrtni-slucaj">
               SMRTNI SLUČAJ
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/kontakt">KONTAKT</a>
+            <a class="nav-link" class:selected={path === '/kontakt'} href="/kontakt">KONTAKT</a>
           </li>
         </ul>
         <div class="mobile-990 hr mt-3"></div>
@@ -84,5 +88,24 @@
 </header>
 
 <style>
+  .selected {
+    transition: 0.2s;
+    font-weight: bolder !important;
+    display: inline-block;
+    padding-bottom:2px;
+    background-image: linear-gradient(#000 0 0);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+  }
 
+  .nav-link {
+    transition: 0.2s;
+  }
+
+  .nav-link:hover, .nav-link:focus {
+    background-position: 0% 100%;
+    background-size: 100% 1px;
+    font-weight: bolder !important;
+  }
 </style>
