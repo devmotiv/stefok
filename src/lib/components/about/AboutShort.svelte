@@ -40,7 +40,7 @@
     <div class="d-flex justify-content-center">
       <a href="tel:+385098737163" class="button-phone m-auto">
         <i class="bi bi-whatsapp"></i>
-        <span>Nazovite: (+385) 098 737 163</span>
+        <span><span class="mobile-d-none">Nazovite: </span>(+385) 098 737 163</span>
       </a>
     </div>
   </div>
@@ -91,5 +91,28 @@
     color: #0b7978;
     font-weight: bold;
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 980px) {
+    .button-phone {
+      font-size: large;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .button-phone {
+      font-size:medium;
+    }
+  }
+
+  @media screen and (max-width: 382px) {
+    .mobile-d-none {
+      display: none;
+    }
+
+    .button-phone {
+      width: 80%;
+      text-align: center;
+    }
   }
 </style>

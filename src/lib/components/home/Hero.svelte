@@ -1,5 +1,20 @@
 <script>
-  export let h1, h2, shortAbout, shortAboutIconClass, containerClass, buttonText, buttonIcon, anchorHref, displayPhone='true', secondary='false';
+  export let 
+  h1, 
+  h2, 
+  shortAbout, 
+  shortAboutIconClass, 
+  containerClass, 
+  buttonText, 
+  buttonIcon, 
+  anchorHref, 
+  displayPhone='true',
+  displayCustom='false',
+  secondary='false';
+
+  const isMobilePhoneShown = (displayPhone === 'true' && displayCustom === 'false');
+  const isCustomTextShown = (displayPhone === 'false' && displayCustom === 'true');
+  console.log(isMobilePhoneShown, isCustomTextShown)
 </script>
 
 <section class="hero{secondary === 'true' ? '-secondary' : ''} p-4">
@@ -17,7 +32,17 @@
         </p>
         {/if}
       </div>
-      {#if displayPhone === 'true'}
+      {#if isMobilePhoneShown}
+      <div class="d-flex flex-column p-4 gap-4 mt-4 align-items-center flex-lg-row justify-content-between">
+        <div class="w-50 divider"></div>
+        <a href="tel:+385098737163" class="button-phone">
+          <i class="bi bi-whatsapp"></i>
+          <span><span class="mobile-d-none">Nazovite: </span>(+385) 098 737 163</span>
+        </a>
+      </div>
+      {/if}
+
+      {#if isCustomTextShown}
       <div class="d-flex flex-column p-4 gap-4 mt-4 align-items-center flex-lg-row justify-content-between">
         <div class="w-50 divider"></div>
         <a href="{anchorHref}" class="button-phone">
