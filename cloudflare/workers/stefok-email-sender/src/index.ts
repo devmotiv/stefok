@@ -120,9 +120,8 @@ export default {
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Basic ${btoa(`${env.MAILJET_API_KEY}:${env.MAILJET_SECRET_KEY}`)}`,
-              'Access-Control-Allow-Origin': 'https://pogrebne-usluge-mimoza.com',
-              'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type',
+              'Referer': 'https://pogrebne-usluge-mimoza.com',
+              'User-Agent': 'Cloudflare Workers'
             },
             body: JSON.stringify({
               Messages: [
@@ -139,14 +138,26 @@ export default {
    
           const data = await response.json();
           console.log(data);
-          return new Response(JSON.stringify({body: data}));
+          return new Response(JSON.stringify({body: data}), {
+            headers: {
+              'Access-Control-Allow-Origin': 'https://pogrebne-usluge-mimoza.com',
+              'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            }
+          });
 
         } catch (error) {
           console.log(error)
         }
     }
 
-    const response = new Response(JSON.stringify({body: undefined}));
+    const response = new Response(JSON.stringify({body: undefined}), {
+      headers: {
+        'Access-Control-Allow-Origin': 'https://pogrebne-usluge-mimoza.com',
+        'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      }
+    });
     return response;
 	},
 };

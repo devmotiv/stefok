@@ -30,8 +30,7 @@
       const request = fetch(workerApi, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json;charset=utf-8',
-          "Access-Control-Allow-Origin": "*"
+          'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(formData)
       });
