@@ -37,10 +37,15 @@
     <h3 class="text-center mt-4 py-4 text-gold">
       Naša briga kreće od Vašeg poziva
     </h3>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column justify-content-center">
       <a href="tel:+385098737163" class="button-phone m-auto">
         <i class="bi bi-whatsapp"></i>
         <span><span class="mobile-d-none">Nazovite: </span>(+385) 098 737 163</span>
+      </a>
+      <span class="text-center mt-4 mb-4 display-6"> ili </span>
+      <a href="tel:+385033684109" class="button-phone m-auto">
+        <i class="bi bi-whatsapp"></i>
+        <span><span class="mobile-d-none">Nazovite: </span>(+385) 033 684 109</span>
       </a>
     </div>
   </div>

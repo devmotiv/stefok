@@ -61,6 +61,11 @@
         <i class="bi bi-whatsapp"></i>
         <span>(+385) 098 737 163</span>
       </a>
+      <span class="text-center mt-4 mb-4 display-6"> ili </span>
+      <a href="tel:+385033684109" class="button-phone m-auto">
+        <i class="bi bi-whatsapp"></i>
+        <span><span class="mobile-d-none">Nazovite: </span>(+385) 033 684 109</span>
+      </a>
       <br>
       <a href="/usluge" class="button-phone d-flex gap-2 align-items-center justify-content-center">
         <span>Saznajte više o našim uslugama</span>
