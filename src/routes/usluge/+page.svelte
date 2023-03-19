@@ -61,7 +61,7 @@
   heading="OBJAVA U JAVNIM GLASILIMA"
 />
 <section class="container d-flex flex-column gap-4 display-6 mt-4 mb-4 p-4">
-  <p>Po vašoj želji, predajemo obavijesti o smrti i lokalna i druga javna glasila te izražujemo osmrtnice.</p>
+  <p>Po vašoj želji, predajemo obavijesti o smrti i lokalna i druga javna glasila te izrađujemo osmrtnice.</p>
   <p>
     Za više informacija i druge upite uvijek nas možete kontaktirati.
   </p>
@@ -94,7 +94,7 @@
   heading="KREMIRANJE UMRLE OSOBE"
 />
 <section class="container d-flex flex-column gap-4 display-6 mt-4 mb-4 p-4">
-  <p>Organizimamo kremiranje umrle osobe te sve ostale detalje u svezi kremiranja i pokopa urne.</p>
+  <p>Organiziramo kremiranje umrle osobe te sve ostale detalje u svezi kremiranja i pokopa urne.</p>
   <p>
     Mi možemo preuzeti odgovornost dogovora sa grobljem gdje će se obaviti pokop umrle osobe.
   </p>

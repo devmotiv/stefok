@@ -1,11 +1,6 @@
 <section class="container-fluid p-4 custom">
   <h2 class="text-center">Kako do nas</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.4830501862407!2d17.867299!3d45.6009359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d65a30ff19ee9%3A0x523645729471a6e0!2sPogrebno%20poduze%C4%87e%20Mimoza%20%C5%A0tefok!5e0!3m2!1shr!2shr!4v1678574981165!5m2!1shr!2shr" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade"
-  title="Gdje se nalazimo"
-  class="mt-4"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.890291720106!2d17.869132316207544!3d45.592750132876326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d6f8f3cbe1963%3A0x8fca4db1c7f17ea7!2zVWwuIFBldHJhIFByZXJhZG92acSHYSAxNywgMzM1MTQsIMSMYcSNaW5jaQ!5e0!3m2!1shr!2shr!4v1679234178523!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Gdje se nalazimo"></iframe>
 </section>
 
 <style>
