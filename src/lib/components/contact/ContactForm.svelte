@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import Alert from './Alert.svelte';
   let formData = {
     name: undefined,
     email: undefined,
@@ -8,6 +9,32 @@
     phone: undefined,
   }
   let form;
+  let showAlert = false;
+  let isEmailSuccessfullCheck = false;
+  let alertMessage;
+  const isEmailSuccessfull = (responseStatus) => {
+    if (responseStatus === 'success') {
+      return true;
+    }
+    return false;
+  }
+
+  const resetform = () => {
+    formData = {
+      name: undefined,
+      email: undefined,
+      subject: undefined,
+      message: undefined,
+      phone: undefined,
+    }
+  }
+
+  const closeAlert = () => {
+    setTimeout(() => {
+      showAlert = false;
+    }, 5000);
+  }
+
   onMount(() => {
     form = document.getElementById('contact_form');
   });
@@ -24,7 +51,9 @@
     return false;
   }
   const local = false;
-  const workerApi = local ? ' http://127.0.0.1:8787' : 'https://stefok-email-sender.w-discordbot.workers.dev/';
+  const workerApi = local ? ' https://stefok-email-sender-dev.w-discordbot.workers.dev/' : 'https://stefok-email-sender.w-discordbot.workers.dev/';
+
+
   const sendEmailHandler = (e) => {
     if (isFormDataValid()) {
       const request = fetch(workerApi, {
@@ -33,17 +62,33 @@
           'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(formData)
-      });
-      request.then(data => {
-        return data.json();
       }).then(result => {
-        console.log(result)
-      })
+        return result.json();
+      }).then(data => {
+        console.log(data)
+        const statusSuccessfull = isEmailSuccessfull(data.body.Messages[0].Status);
+        if(statusSuccessfull) {
+          isEmailSuccessfullCheck = true;
+          alertMessage = 'Vaša poruka je poslana!';
+        } else {
+          isEmailSuccessfullCheck = false;
+          alertMessage = 'Nešto je pošlo po krivu. Nismo uspjeli poslati Vašu poruku. Pokušajte ponovno kasnije ili nazovite naš telefonski broj.';
+        }
+        showAlert = true;
+        resetform();
+        closeAlert();
+      }).catch(error => {
+        isEmailSuccessfullCheck = false;
+        alertMessage = 'Nešto je pošlo po krivu. Nismo uspjeli poslati Vašu poruku. Pokušajte ponovno kasnije ili nazovite naš telefonski broj.';
+        showAlert = true;
+        console.log(error)
+        resetform();
+        closeAlert();
+      });
     }
 
   }
 </script>
-
 <section class="form-container container-md p-4 d-flex justify-content-center">
   <section class="form-wrapper p-4">
     <h3>Pošaljite nam e-mail</h3>
@@ -67,6 +112,11 @@
         Na usluzi smo Vam 24 sata dnevno, 7 dana u tjednu!
       </em>
     </p>
+    <div>
+      {#if showAlert}
+        <Alert success={isEmailSuccessfullCheck} message={alertMessage} />
+      {/if}
+    </div>
   </section>
 </section>
 
