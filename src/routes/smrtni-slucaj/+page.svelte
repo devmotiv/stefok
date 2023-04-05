@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Smrtni slučaj</title>
+	<title>Štefok - Smrtni slučaj</title>
 	<meta name="description" content="Pogrebno Poduzeće Mimoza - Kako postupiti u slučaju smrti" />
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="page" />

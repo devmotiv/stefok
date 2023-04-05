@@ -10,7 +10,8 @@
   anchorHref, 
   displayPhone='true',
   displayCustom='false',
-  secondary='false';
+  secondary='false',
+  replaceHeadingOne='false';
 
   const isMobilePhoneShown = (displayPhone === 'true' && displayCustom === 'false');
   const isCustomTextShown = (displayPhone === 'false' && displayCustom === 'true');
@@ -21,7 +22,11 @@
   <div class="content-section{secondary==='true' ? '-secondary' : ''} d-flex align-items-center justify-content-center">
     <div class="{containerClass ? containerClass : 'container'} p-4 custom{secondary === 'true' ? '-secondary' : ''}">
       <div class="text">
+        {#if replaceHeadingOne === "true"}
+        <div class="custom-heading-one">{h1}</div>
+        {:else}
         <h1>{h1}</h1>
+        {/if}
         <h3>{h2}</h3>
         {#if shortAbout}
         <p class="text-center w-50 p-4 about-short m-auto-i mt-4">
@@ -115,7 +120,7 @@
     background-color: #0e9b99;
   }
 
-  h1 {
+  h1, .custom-heading-one  {
     font-size: 84px;
   }
 
@@ -130,7 +135,7 @@
   }
 
   @media screen and (max-width: 980px) {
-    h1 {
+    h1, .custom-heading-one  {
       font-size: 64px;
     }
 
@@ -147,7 +152,7 @@
     .content-section, .hero {
       height: auto;
     }
-    h1 {
+    h1, .custom-heading-one  {
       font-size: 40px;
     }
 
@@ -170,7 +175,7 @@
   }
 
   @media screen and (max-width: 420px) {
-    h1 {
+    h1, .custom-heading-one  {
       font-size: 32px;
     }
 

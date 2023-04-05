@@ -32,7 +32,7 @@ const closeImageModal = (event) => {
 <section class="{cssClass}">
   <div id="container" class="container p-4 mt-4 mb-4">
     {#each data.imageFiles as imageFile}
-      <img src="/images/galery/{imageFile}" loading="lazy" data-grid-lazy="true" alt="" data-grid-not-equal-size="true" on:click={openImageModal} on:keyup={openImageModal}/>
+      <img src="/images/galery/{imageFile}" loading="lazy" data-grid-lazy="true" alt="slika-cvijeća" data-grid-not-equal-size="true" on:click={openImageModal} on:keyup={openImageModal}/>
     {/each}
   </div>
 </section>
@@ -43,7 +43,7 @@ const closeImageModal = (event) => {
     <i class="bi bi-x-lg"></i>
   </button>
   <div class="img-container d-flex justify-content-center align-items-center">
-    <img on:click={closeImageModal} on:keyup={closeImageModal} src={imageFilePath} class="modal-content" alt=""/>
+    <img on:click={closeImageModal} on:keyup={closeImageModal} src={imageFilePath} class="modal-content" alt="zatvori prikaz slike"/>
   </div>
 </div>
 

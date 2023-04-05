@@ -29,6 +29,7 @@
   <ServicesShort />
   <Hero
     h1="Galerija",
+    replaceHeadingOne="true"
     h2="Veliki izbor cvijeća i cvjetnih aranžmana"
     secondary="true"
     buttonIcon="bi bi-flower2"
