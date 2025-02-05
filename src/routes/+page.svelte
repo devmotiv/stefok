@@ -1,57 +1,42 @@
 <script>
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+  import Hero from '$lib/components/home/Hero.svelte';
+  import ServicesShort from '$lib/components/home/ServicesShort.svelte';
+  import data from '$lib/components/home/data.json';
+  import AboutShort from '../lib/components/about/AboutShort.svelte';
+  import Map from '../lib/components/contact/Map.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Pogrebno Poduzeće Mimoza - Štefok</title>
+  <meta name="description" content="Pogrebno Poduzeće Mimoza - Štefok, Čačinci. S Vama još od 1999. godine.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="Pogrebno Poduzeće Mimoza" />
+  <meta property="og:description" content="Početna" />
+  <!-- <meta property="og:url" content="PERMALINK" /> -->
+  <meta property="og:site_name" content="Pogrebno Poduzeće Mimoza" />
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
+  <Hero 
+    h1={data.h1 + ' "ŠTEFOK"'} 
+    h2={data.h2} 
+    shortAbout={data.shortAbout} 
+    displayPhone='true' 
+    anchorHref="tel:+385098737163"
+    buttonIcon="bi bi-whatsapp"
+    buttonText="Nazovite: (+385) 098 737 163"/>
+  <ServicesShort />
+  <Hero
+    h1="Galerija",
+    replaceHeadingOne="true"
+    h2="Veliki izbor cvijeća i cvjetnih aranžmana"
+    secondary="true"
+    buttonIcon="bi bi-flower2"
+    anchorHref="/galerija"
+    buttonText="Pogledajte galeriju"
+    displayPhone='false'
+    displayCustom='true'/>
+  <AboutShort />
+  <Map />
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>

@@ -1,0 +1,9 @@
+name = "stefok-email-sender-dev"
+main = "src/index.ts"
+compatibility_date = "2023-03-19"
+node_compat = true
+usage_model = "bundled"
+env = { }
+
+[triggers]
+crons = [ ]
