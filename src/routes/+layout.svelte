@@ -6,8 +6,8 @@
 <Header />
 <main>
 	<slot />
+  <Footer />
 </main>
-<Footer />
 
 
 
@@ -17,6 +17,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+    height: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

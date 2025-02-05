@@ -46,6 +46,9 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" class:selected={path === '/odluke'} href="/odluke">ODLUKE</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" class:selected={path === '/kontakt'} href="/kontakt">KONTAKT</a>
           </li>
         </ul>
@@ -103,6 +106,7 @@
 
   .nav-link {
     transition: 0.2s;
+    font-size: 18px;
   }
 
   .nav-link:hover, .nav-link:focus {
